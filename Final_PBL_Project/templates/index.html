@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link rel= "stylesheet" type= "text/css" href= "static/styles/style.css">
+   </head>
+   <body>
+     <h1>Sudoku Solver</h1>
+      <form action="/sudoku" method="post">
+         <div class="sudoku-grid">
+         <div class="row">
+         <div class="col-sm-8">
+            <table class="sudoku">
+               <tbody>
+                  <tr>
+                     <td><input type="number" name="hv11" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv12" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv13" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv14" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv15" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv16" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv17" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv18" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv19" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv21" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv22" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv23" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv24" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv25" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv26" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv27" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv28" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv29" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv31" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv32" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv33" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb br"></td>
+                     <td><input type="number" name="hv34" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv35" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv36" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb br"></td>
+                     <td><input type="number" name="hv37" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv38" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv39" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv41" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv42" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv43" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv44" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv45" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv46" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv47" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv48" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv49" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv51" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv52" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv53" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv54" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv55" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv56" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv57" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv58" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv59" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv61" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv62" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv63" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb br"></td>
+                     <td><input type="number" name="hv64" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv65" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv66" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb br"></td>
+                     <td><input type="number" name="hv67" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv68" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                     <td><input type="number" name="hv69" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell bb"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv71" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv72" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv73" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv74" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv75" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv76" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv77" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv78" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv79" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv81" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv82" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv83" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv84" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv85" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv86" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv87" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv88" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv89" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="number" name="hv91" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv92" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv93" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv94" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv95" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv96" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell br"></td>
+                     <td><input type="number" name="hv97" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv98" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                     <td><input type="number" name="hv99" pattern="[0-9]*" inputmode="numeric" size="1" maxlength="1" min="0" max="9" autocomplete="off" tabindex="0" class="cell"></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="col-sm-4">
+         <div class="sudoku-actions">
+         <div></div>
+         <input type="submit" name="" >
+      </form>
+      </form>
+   </body>
+</html>
